@@ -46,9 +46,9 @@ private:
 public:
   virtual ~CharacterFactory() {};
 
-  virtual ICharacter* CharacterGetter() = 0;
+  virtual ICharacter* get_character() = 0;
 
-  const void CharacterDo();
+  const void do_character();
   
 };
 
@@ -57,7 +57,7 @@ class CharacterWarior : CharacterFactory
 private:
 
 public:
-  ICharacter* CharacterGetter() override
+  ICharacter* get_character() override
   {
     return new Warior();
   }
@@ -68,7 +68,7 @@ class CharacterMage : CharacterFactory
 private:
 
 public:
-  ICharacter* CharacterGetter() override
+  ICharacter* get_character() override
   {
     return new Mage();
   }
@@ -79,7 +79,7 @@ class CharacterArcher : CharacterFactory
 private:
 
 public:
-  ICharacter* CharacterGetter() override
+  ICharacter* get_character() override
   {
     return new Archer();
   }

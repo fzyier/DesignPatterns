@@ -28,9 +28,9 @@ void Archer::defend() const
   std::cout << "ARCHER" << " DEFEND!" << '\n';
 }
 // ! CharacterFactory
-const void CharacterFactory::CharacterDo()
+const void CharacterFactory::do_character()
 {
-    ICharacter* character{this->CharacterGetter()};
+    ICharacter* character{this->get_character()};
 
     character->attack();
     character->defend();
