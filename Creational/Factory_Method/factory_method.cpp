@@ -1,4 +1,4 @@
-#include "Factory.hpp"
+#include "factory_method.hpp"
 
 // ! Warior : ICharacter
 void Warior::attack() const
