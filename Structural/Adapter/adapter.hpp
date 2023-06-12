@@ -6,7 +6,7 @@
 class Vida 
 {
  private:
- double seconds;
+ double seconds_;
  public:
   virtual ~Vida() = default;
   virtual double request() const;
@@ -15,7 +15,7 @@ class Vida
 class Bastergard
 {
 protected:
-  double minutes;
+  double minutes_;
 public:
   double SpecificRequest() const;
 };
