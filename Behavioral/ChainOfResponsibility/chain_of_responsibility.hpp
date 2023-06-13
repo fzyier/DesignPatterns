@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 
-// Handler
 class Logger 
 {
 protected:
@@ -19,7 +18,6 @@ protected:
   virtual void write_log(const std::string& message) = 0;
 };
 
-// Concrete Handlers
 class InfoLogger : public Logger 
 {
 protected:
