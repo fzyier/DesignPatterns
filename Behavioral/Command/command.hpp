@@ -7,8 +7,8 @@
 class Light 
 {
 public:
-    void turnOn();
-    void turnOff();
+    void turn_on();
+    void turn_off();
 };
 
 class Command
@@ -45,6 +45,6 @@ private:
     std::vector<Command*> commands_;
 
 public:
-    void addCommand(Command* command);
-    void pressButton(int index);
+    void add_command(Command* command);
+    void press_button(int index);
 };
