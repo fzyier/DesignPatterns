@@ -20,7 +20,7 @@ void Chatroom::sendMessage(Colleague* sender, const std::string& message)
     {
         if (colleague != sender) 
         {
-            colleague->receive(sender->name, message);
+            colleague->receive(sender->name_, message);
         }
     }
 }
