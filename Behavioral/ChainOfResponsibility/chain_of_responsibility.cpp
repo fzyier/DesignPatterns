@@ -1,45 +1,45 @@
 #include "chain_of_responsibility.hpp"
 
 // ! Logger
-void Logger::setNextLogger(Logger* logger) 
+void Logger::set_next_logger(Logger* logger) 
 {
-  nextLogger = logger;
+  next_logger_ = logger;
 }
-void Logger::logMessage(const std::string& message, int level) 
+void Logger::log_message(const std::string& message, int level) 
 {
-  if (level >= getLogLevel()) 
+  if (level >= get_log_level()) 
   {
-      writeLog(message);
+      write_log(message);
   }
-  if (nextLogger != nullptr) 
+  if (next_logger_ != nullptr) 
   {
-      nextLogger->logMessage(message, level);
+      next_logger_->log_message(message, level);
   }
 }
 // ! InfoLogger
-int InfoLogger::getLogLevel() 
+int InfoLogger::get_log_level() 
 {
   return 1;
 }
-void InfoLogger::writeLog(const std::string& message) 
+void InfoLogger::write_log(const std::string& message) 
 {
   std::cout << "Info Logger: " << message << '\n';
 }
 // ! WarningLogger
-int WarningLogger::getLogLevel() 
+int WarningLogger::get_log_level() 
 {
   return 2;
 }
-void WarningLogger::writeLog(const std::string& message) 
+void WarningLogger::write_log(const std::string& message) 
 {
   std::cout << "Warning Logger: " << message << '\n';
 }
 // ! ErrorLogger
-int ErrorLogger::getLogLevel()  
+int ErrorLogger::get_log_level()  
 {
   return 3;
 }
-void ErrorLogger::writeLog(const std::string& message)  
+void ErrorLogger::write_log(const std::string& message)  
 {
   std::cout << "Error Logger: " << message << '\n';
 }

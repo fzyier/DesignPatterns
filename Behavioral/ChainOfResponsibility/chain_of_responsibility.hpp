@@ -7,36 +7,36 @@
 class Logger 
 {
 protected:
-  Logger* nextLogger;
+  Logger* next_logger_;
 
 public:
-  Logger() : nextLogger(nullptr) {}
-  void setNextLogger(Logger* logger);
-  void logMessage(const std::string& message, int level);
+  Logger() : next_logger_(nullptr) {}
+  void set_next_logger(Logger* logger);
+  void log_message(const std::string& message, int level);
 
 protected:
-  virtual int getLogLevel() = 0;
-  virtual void writeLog(const std::string& message) = 0;
+  virtual int get_log_level() = 0;
+  virtual void write_log(const std::string& message) = 0;
 };
 
 // Concrete Handlers
 class InfoLogger : public Logger 
 {
 protected:
-  int getLogLevel() override;
-  void writeLog(const std::string& message) override;
+  int get_log_level() override;
+  void write_log(const std::string& message) override;
 };
 
 class WarningLogger : public Logger 
 {
 protected:
-  int getLogLevel() override;
-  void writeLog(const std::string& message) override;
+  int get_log_level() override;
+  void write_log(const std::string& message) override;
 };
 
 class ErrorLogger : public Logger 
 {
 protected:
-  int getLogLevel() override;
-  void writeLog(const std::string& message) override;
+  int get_log_level() override;
+  void write_log(const std::string& message) override;
 };
