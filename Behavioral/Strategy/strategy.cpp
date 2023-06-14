@@ -1,12 +1,12 @@
 #include "strategy.hpp"
 
 // ! BubbleSortStrategy
-void BubbleSortStrategy::sort(std::vector<int>& data) override 
+void BubbleSortStrategy::sort(std::vector<int>& data)  
 {
     std::cout << "Sorting using Bubble Sort." << std::endl;
 }
 // ! QuickSortStrategy
-void QuickSortStrategy::sort(std::vector<int>& data) override 
+void QuickSortStrategy::sort(std::vector<int>& data)  
 {
     std::cout << "Sorting using Quick Sort." << std::endl;
 }
